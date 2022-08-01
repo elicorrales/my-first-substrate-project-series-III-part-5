@@ -114,7 +114,7 @@ cargo contract instantiate \
        --code-hash $code_hash
 ```
   
-Notice that we just took the same gas value as was the default, so ofcourse we should get the same error.  
+Notice that we just took the same gas value as was the default, so of course we should get the same error.  
   
 Now, take the above command, the gas value, and just add one more zero at the end of it.  
   
