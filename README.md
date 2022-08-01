@@ -162,7 +162,7 @@ $ cargo contract instantiate        --gas 500000000000        --constructor new 
 ```
   
 Ok, so we have 1) uploaded, 2) instantiated.  Now, we are ready to attempt to 3) call it.  
-That is, let's try to invoke the one method that we have in that contract (see [Part 4's lib.rs](https://github.com/elicorrales/my-first-substrate-project-series-III-part-4/blob/main/my-first-smart-contract/helloworld/lib.rs).  The ```message``` is ```sayHello```.  
+That is, let's try to invoke the one method that we have in that contract (see [Part 4's lib.rs](https://github.com/elicorrales/my-first-substrate-project-series-III-part-4/blob/main/my-first-smart-contract/helloworld/lib.rs).  The ```message``` is ```sayhello```.  
   
 
 The ```call``` command is similar, but different from the ```instantiate``` command, in that instead of using the ```Code hash``` output of the ```upload```, we need to use the ```Contract``` (last line of above output).  Also, instead of a ```-constructor```, it is a ```--message```, followed by the name of it.  
