@@ -130,6 +130,7 @@ cargo contract instantiate \
 ```
   
 Voila!  
+```
 $ cargo contract instantiate        --gas 500000000000        --constructor new        --args false        --suri
 //Alice        --code-hash $code_hash
         Event Balances ➜ Withdraw
