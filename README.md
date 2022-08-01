@@ -214,4 +214,66 @@ $ cargo contract call \
           dispatch_info: DispatchInfo { weight: 592600674, class: Normal, pays_fee: Yes }
 ```
   
+## What Is The Difference Between [substrate-node-template](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/README.md) and [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node/blob/main/README.md) ??  
+
+I grabbed a copy of some of the output during building of both nodes.  
+  
+Here is partial output of the ```substrate-node-template```:  
+```
+Compiling pallet-transaction-payment
+Compiling pallet-authorship
+Compiling pallet-sudo
+Compiling pallet-randomness-collective-flip
+Compiling frame-executive
+Compiling sc-rpc-api
+Compiling sc-finality-grandpa
+Compiling pallet-timestamp
+Compiling pallet-balances
+Compiling pallet-template
+Compiling pallet-transaction-payment-rpc-runtime-api
+Compiling pallet-session
+Compiling pallet-aura
+Compiling pallet-transaction-payment-rpc
+Compiling sc-rpc
+Compiling substrate-frame-rpc-system
+Compiling pallet-grandpa
+```
+  
+And here is a similar output from building the ```substrate-contracts-node```:  
+```
+Compiling pallet-transaction-payment
+Compiling pallet-sudo
+Compiling frame-executive
+Compiling pallet-authorship
+Compiling pallet-randomness-collective-flip
+Compiling sc-chain-spec
+Compiling sc-informant
+Compiling sc-offchain
+Compiling pallet-balances
+Compiling pallet-contracts  <--most important difference
+Compiling pallet-timestamp
+```
+  
+So the first node is missing the one pallet that we need: ```pallet-contracts```.
+  
+I was going to delve into the topic of ```pallets```, but from doing google searches, it mostly seems to be used by this substrate blockchain framework.  I apologize if I am wrong.  
+  
+Since these blockchain series seem to be an ongoing overview of various blockchains, I didn't aspire to delve too deeply into any one of them, at least not on the first pass.
+  
+The purpose of all these series is to become a *generalist*, not a specialist in any one particular blockchain.  
+  
+Having said that, it is the ```pallets``` that partly make substrate be a framework and not just a blockchain.  
+  
+You can put together and configure various pallets and those seem to give your particular blockchain its purpose, capablities, and flavor.  
+  
+For example, I believe the polkadot is a blockchain.  
+  
+If you go to [Defi Llama](https://defillama.com/chains), it will rank coins and tokens by the total value locked in each *chain*.  
+  
+So in our up-to-now series, we have covered *NEAR*, *Solana*, and *Substrate*.  
+  
+If you do a search on Defi Llama, for NEAR, you'll find it.  
+Also, Solana.  But you won't find *substrate*.  However, you *will* find Polkadot.  
+Polkadot is build from Substrate.  So are others.  
+  
 
