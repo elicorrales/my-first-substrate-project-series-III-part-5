@@ -277,3 +277,7 @@ Also, Solana.  But you won't find *substrate*.  However, you *will* find Polkado
 Polkadot is build from Substrate.  So are others.  
   
 
+## What About The Node Running In the Docker Container of Part 2?  
+  
+That one gave us a different error, and I never pursued it any further.  If you are interested, try to find a different, maybe newer version of the right Docker image to create a node from.  
+  
