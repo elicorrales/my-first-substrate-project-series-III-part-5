@@ -83,7 +83,6 @@ Now, copy-paste and run this command to instantiate the contract:
 ```
 cargo contract instantiate \
        --constructor new \
-       --args false \
        --suri //Alice \
        --code-hash $code_hash
 ```
@@ -92,7 +91,6 @@ We have a different problem:
 ```
 $ cargo contract instantiate \
     --co>        --constructor new \
->        --args false \
 >        --suri //Alice \
       -->        --code-hash $code_hash
 ERROR: Module error: Contracts: OutOfGas
@@ -109,7 +107,6 @@ So now we will modify the above command.
 cargo contract instantiate \
        --gas 50000000000 \
        --constructor new \
-       --args false \
        --suri //Alice \
        --code-hash $code_hash
 ```
@@ -124,14 +121,13 @@ Now, copy-paste and run this command to instantiate the contract:
 cargo contract instantiate \
        --gas 500000000000 \
        --constructor new \
-       --args false \
        --suri //Alice \
        --code-hash $code_hash
 ```
   
 Voila!  
 ```
-$ cargo contract instantiate        --gas 500000000000        --constructor new        --args false        --suri
+$ cargo contract instantiate        --gas 500000000000        --constructor new              --suri
 //Alice        --code-hash $code_hash
         Event Balances ➜ Withdraw
           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
