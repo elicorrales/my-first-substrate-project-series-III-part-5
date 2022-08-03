@@ -1,6 +1,6 @@
 # my-first-substrate-project-series-III-part-5
 
-# Uploading A Smart Contract To A Local Substrate Node  
+# Upload, Instantiate, Call A Smart Contract To A Local Substrate Node  
   
 ## Let's Try The Node From Part 1 
 
